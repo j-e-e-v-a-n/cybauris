@@ -220,7 +220,6 @@ nav {
 }
 
 
-/* Tech Stack Section */
 .tech-stack {
   margin: 3rem;
   text-align: center; /* Center the section */
@@ -249,7 +248,7 @@ nav {
   transition: transform 0.3s, color 0.3s; /* Add smooth transition */
 }
 
-.tech-icon i {
+.tech-icon i, .tech-icon svg, .tech-icon img {
   font-size: 3rem;
   color: var(--primary-color);
   margin-bottom: 1rem;
@@ -264,13 +263,20 @@ nav {
   text-transform: capitalize; /* Make the text more readable */
 }
 
-.tech-icon:hover i {
+.tech-icon:hover i, .tech-icon:hover svg, .tech-icon:hover img {
   transform: scale(1.1); /* Slight scale effect on hover */
 }
 
 .tech-icon:hover p {
   color: var(--highlight-color); /* Change text color on hover */
 }
+
+/* Kali Linux Specific Styling */
+.tech-icon .kali-logo {
+  filter: brightness(0) saturate(100%) invert(1);
+}
+
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -280,7 +286,7 @@ nav {
     justify-content: space-evenly; /* Distribute icons evenly */
   }
 
-  .tech-icon i {
+  .tech-icon i, .tech-icon svg {
     font-size: 2.5rem; /* Reduce icon size */
   }
 
@@ -294,7 +300,7 @@ nav {
     gap: 1.5rem; /* Further reduce gap on extra-small screens */
   }
 
-  .tech-icon i {
+  .tech-icon i, .tech-icon svg {
     font-size: 2rem; /* Further reduce icon size */
   }
 
@@ -302,6 +308,7 @@ nav {
     font-size: 0.8rem; /* Further adjust text size */
   }
 }
+
 
 
 
